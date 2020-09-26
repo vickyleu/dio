@@ -9,12 +9,12 @@ environment:
 
 dependencies:
   cookie_jar: ^1.0.1
-#  dio: ^3.0.0
   dio:
-    path: ../../dio
+    git:
+      url: https://github.com/vickyleu/dio.git
+      ref: master
+      path: dio
 
 dev_dependencies:
-  test: ^1.5.1
-  test_coverage: ^0.2.0
   pedantic: '1.1.0'
 
