@@ -126,6 +126,7 @@ class DefaultTransformer extends Transformer {
         );
       }
     } else {
+
       await completer.future;
     }
     // we create a final Uint8List and copy all chunks into it
