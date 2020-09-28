@@ -53,7 +53,7 @@ class Response<T> {
   ///
   /// ** Attention **: Whether this field is available depends on whether the
   /// implementation of the adapter supports it or not.
-  Uri get realUri => redirects.last?.location ?? request.uri;
+  Uri get realUri => (redirects.isNotEmpty?redirects.last:null)?.location ?? request.uri;
 
   /// We are more concerned about `data` field.
   @override
