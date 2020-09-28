@@ -46,7 +46,7 @@ class DefaultHttpClientAdapter implements HttpClientAdapter {
     try {
       request = await requestFuture;
       //Set Headers
-      options.headers.forEach((k, v) => request.headers.set(k, v));
+      options.headers.forEach((k, v) => request.headers.set(k, v ,preserveHeaderCase:true));
     } on SocketException catch (e) {
       if (e.message.contains('timed out')) _throwConnectingTimeout();
       rethrow;
