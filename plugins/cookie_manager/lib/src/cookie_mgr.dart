@@ -13,7 +13,7 @@ class CookieManager extends Interceptor {
 
   @override
   Future onRequest(RequestOptions options) async {
-    var cookies = cookieJar.loadForRequest(options.uri);
+    var cookies = await cookieJar.loadForRequest(options.uri);
     cookies.removeWhere((cookie) {
       if (cookie.expires != null) {
         return cookie.expires.isBefore(DateTime.now());
